@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".Wishlist">
+
+    <!--background circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Wishlist"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="90dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:background="@drawable/shape_white_rectangle"
+                android:textAlignment="center"
+                android:text="This section allows you to save your preferred medical products and medications as a wishlist for easy reference ." />
+
+            <EditText
+                android:id="@+id/typeField"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@drawable/light_blue_rectangle_shape_for_items"
+                android:hint="Type"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/darkBlue"/>
+
+            <EditText
+                android:id="@+id/nameField"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/light_blue_rectangle_shape_for_items"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/darkBlue"/>
+
+            <EditText
+                android:id="@+id/specialNotesField"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/light_blue_rectangle_shape_for_items"
+                android:ems="10"
+                android:hint="Special Notes"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/darkBlue" />
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/addBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#000000"
+                    android:layout_marginRight="20dp"
+                    android:text="ADD"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/viewBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#000000"
+                    android:layout_marginLeft="20dp"
+                    android:text="VIEW"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/idField"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@drawable/light_blue_rectangle_shape_for_items"
+                android:ems="10"
+                android:hint="ID"
+                android:inputType="text"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/darkBlue"/>
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/updateBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#000000"
+                    android:layout_marginRight="20dp"
+                    android:text="UPDATE"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#000000"
+                    android:layout_marginLeft="20dp"
+                    android:text="DELETE"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/clearBtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#000000"
+                android:layout_marginTop="10dp"
+                android:text="CLEAR"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

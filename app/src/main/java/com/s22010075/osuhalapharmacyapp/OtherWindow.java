@@ -1,0 +1,100 @@
+package com.s22010075.osuhalapharmacyapp;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class OtherWindow extends AppCompatActivity {
+
+
+    //screen button variable
+    private ImageView navBtnHome, navBtnUpdates, navBtnLocation, navBtnHealthCare, navBtnProfile;
+    private Button btnAboutUs, btnJobVacancies;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_other_window);
+
+        // screen button - to move into about us window
+        btnAboutUs = findViewById(R.id.btnAboutUs);
+        btnAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AboutUs.class);
+                startActivity(intent);
+            }
+        });
+
+        // screen button - to move into job vacancies window
+        btnJobVacancies = findViewById(R.id.btnJobVacancies);
+        btnJobVacancies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), JobVacancies.class);
+                startActivity(intent);
+            }
+        });
+
+        // -----------------------------------------------------------------------------------------
+
+        // nav bar icon buttons
+        // Home - to move into dashboard window
+        navBtnHome = findViewById(R.id.iconHome);
+        navBtnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                startActivity(intent);
+            }
+        });
+
+        // Updates - to move into updates window
+        navBtnUpdates = findViewById(R.id.iconNotice);
+        navBtnUpdates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Updates.class);
+                startActivity(intent);
+            }
+        });
+
+        // Location - to move into location window
+        navBtnLocation = findViewById(R.id.iconLocation);
+        navBtnLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Location.class);
+                startActivity(intent);
+            }
+        });
+
+        // HealthCare - to move into healthcare window
+        navBtnHealthCare = findViewById(R.id.iconHealth);
+        navBtnHealthCare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HealthCare.class);
+                startActivity(intent);
+            }
+        });
+
+        // Profile - to move into profile window
+        navBtnProfile = findViewById(R.id.iconProfile);
+        navBtnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Profile.class);
+                startActivity(intent);
+            }
+        });
+    }
+}

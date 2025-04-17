@@ -1,0 +1,60 @@
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Signing keys
+**/keystore.jks
+**/*.jks
+**/key.properties
+**/release.properties
+
+# Local configuration
+/local.properties
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Android Studio specific
+.cxx/
+.externalNativeBuild/
+captures/
+.cache/
+*.hprof
+
+# Firebase / Google Services (generated file, okay to ignore)
+google-services.json
+strings.xml
+res/values/strings.xml
+
+# Misc
+*.class
+*.apk
+*.ap_
+*.dex
+*.jar
+*.war
+*.zip
+*.tmp
+*.bak
+
+# Proguard mapping files
+**/proguard/mapping.txt
+
+# Kotlin build (in case of mixed language)
+*.kotlin_module
+
+# VCS metadata
+*.orig
+
+# User-specific files
+local.properties
+

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".Updates">
+
+    <!--background circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Updates"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--content-->
+    <TextView
+        android:id="@+id/noticeOffersTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="Notices &amp; Offers"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/contentScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBannerLayout"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <ScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="100dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="467dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_shape_light_gray_rectangle_with_opacity"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024.06.09"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="2:58 PM"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:hint="Dear valued customers, please note that tommorow our pharmacy will be closed for a repair. We apologize for any inconvenience and look forward to serving you again during our regular hours. Thank you for your understanding."
+                    android:text=""
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_shape_light_gray_rectangle_with_opacity"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024.06.08"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="9:08 AM"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:hint="Exciting news! Enjoy 10% specific discount for all medicine item at our pharmacy. Don’t miss out."
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_shape_light_gray_rectangle_with_opacity"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024.06.01"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="4:00 PM"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:hint="Exciting News! We’ve updated our offers just for you. Check out the latest discounts and special promotions at our pharmacy."
+                    android:text=""
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_shape_light_gray_rectangle_with_opacity"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024.05.30"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="8:58 AM"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:hint="Enjoy exclusive discounts on select products this week! Visit us and save on your favorite pharmacy items. Don't miss out!"
+                    android:text=""
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_shape_light_gray_rectangle_with_opacity"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024.05.29"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="2:18 PM"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:hint="Exciting news! Enjoy 10% specific discount for all medicine item at our pharmacy. Don’t miss out."
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_shape_light_gray_rectangle_with_opacity"
+                android:layout_marginBottom="10dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="2024.05.20"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="6:58 PM"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:hint="In case of emergencies, you can now reach us at our updated contact number: 031 0562798. Stay safe!"
+                    android:text=""
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

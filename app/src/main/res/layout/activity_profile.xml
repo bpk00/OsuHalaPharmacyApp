@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Profile">
+
+    <!--background circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-20dp"
+        android:layout_marginTop="-25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--content-->
+    <LinearLayout
+        android:id="@+id/contentLayoutForProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="110sp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <!--profile picture-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutForProfilePicture"
+            android:layout_width="184dp"
+            android:layout_height="173dp"
+            android:textAlignment="center">
+
+            <ImageView
+                android:id="@+id/profilePhotoShape"
+                android:layout_width="163dp"
+                android:layout_height="163dp"
+                android:background="@drawable/black_circle_shape"
+                android:foregroundGravity="fill"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <!--profile picture - edit-->
+            <ImageView
+                android:id="@+id/editProfilePhotoShape"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/profilePhotoShape"
+                app:layout_constraintHorizontal_bias="0.893"
+                app:layout_constraintStart_toStartOf="@+id/profilePhotoShape"
+                app:srcCompat="@drawable/light_blue_circle_" />
+
+            <ImageView
+                android:id="@+id/editProfilePhotoIcon"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/editProfilePhotoShape"
+                app:layout_constraintEnd_toEndOf="@+id/editProfilePhotoShape"
+                app:layout_constraintStart_toStartOf="@+id/editProfilePhotoShape"
+                app:layout_constraintTop_toTopOf="@+id/editProfilePhotoShape"
+                app:srcCompat="@drawable/edit_profile_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--profile content-->
+        <LinearLayout
+            android:id="@+id/profileContentLayout"
+            android:layout_width="400dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--username field-->
+            <LinearLayout
+                android:id="@+id/usernameFieldLayout"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:id="@+id/usernameDisplayLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/usernameDisplayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="username"
+                        android:paddingHorizontal="10dp"
+                        android:text=""
+                        android:textColor="@color/darkBlue"
+                        android:textColorHint="@color/darkBlue"
+                        android:textSize="20dp" />
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!--name field-->
+            <LinearLayout
+                android:id="@+id/nameFieldLayout"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_shape_lightblue_rectangle_opacity_and_corner"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:id="@+id/nameDisplayLayout"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/nameDisplayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="Name"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:text=""
+                        android:textColor="#4B4C53"
+                        android:textColorHint="#4B4C53"
+                        android:textSize="18dp" />
+
+                </HorizontalScrollView>
+
+                <!--edit name-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/editNameIconLayout"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp">
+
+                    <ImageView
+                        android:id="@+id/editNameIconShape"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        app:srcCompat="@drawable/light_blue_circle_" />
+
+                    <ImageView
+                        android:id="@+id/editNameIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/editNameIconShape"
+                        app:layout_constraintEnd_toEndOf="@+id/editNameIconShape"
+                        app:layout_constraintStart_toStartOf="@+id/editNameIconShape"
+                        app:layout_constraintTop_toTopOf="@+id/editNameIconShape"
+                        app:srcCompat="@drawable/edit_icon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <!--email field-->
+            <LinearLayout
+                android:id="@+id/emailFieldLayout"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_shape_lightblue_rectangle_opacity_and_corner"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <HorizontalScrollView
+                    android:id="@+id/emailDisplayLayout"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/emailDisplayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="Email"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:text=""
+                        android:textColor="#4B4C53"
+                        android:textColorHint="#4B4C53"
+                        android:textSize="18dp" />
+                </HorizontalScrollView>
+
+                <!--edit email-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/editEmailIconLayout"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp">
+
+                    <ImageView
+                        android:id="@+id/editEmailIconShape"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        app:srcCompat="@drawable/light_blue_circle_" />
+
+                    <ImageView
+                        android:id="@+id/editEmailIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/editEmailIconShape"
+                        app:layout_constraintEnd_toEndOf="@+id/editEmailIconShape"
+                        app:layout_constraintStart_toStartOf="@+id/editEmailIconShape"
+                        app:layout_constraintTop_toTopOf="@+id/editEmailIconShape"
+                        app:srcCompat="@drawable/edit_icon" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--button layout-->
+        <ScrollView
+            android:id="@+id/btnLayout"
+            android:layout_width="397dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/btnLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/myWishListBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#000000"
+                    android:gravity="center"
+                    android:text="Wishlist"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/signInBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#000000"
+                    android:gravity="center"
+                    android:text="Sign In"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/logInbtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#000000"
+                    android:gravity="center"
+                    android:text="Log In"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/logOutBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#000000"
+                    android:gravity="center"
+                    android:text="Log Out"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/editProfileBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#000000"
+                    android:gravity="center"
+                    android:text="Edit Profile"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/changePasswordBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#000000"
+                    android:gravity="center"
+                    android:text="Change Password"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/deleteAccountBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="#000000"
+                    android:gravity="center"
+                    android:text="Delete Account"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

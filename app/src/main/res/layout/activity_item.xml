@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".Item">
+
+    <!--background big circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-20dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape_light_blue" />
+
+    <!--background small circle shape-->
+    <ImageView
+        android:id="@+id/smallCircleShape"
+        android:layout_width="146dp"
+        android:layout_height="141dp"
+        android:layout_marginLeft="-40dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
+        app:srcCompat="@drawable/osuhala_full_circle_shape_light_blue" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Item Name"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--item layout-->
+    <ScrollView
+        android:id="@+id/itemScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/itemNameGridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--item layout-->
+            <LinearLayout
+                android:id="@+id/itemLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/light_blue_rectangle_shape_for_items"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <!--item image-->
+                <ImageView
+                    android:id="@+id/itemImage"
+                    android:layout_width="300dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/custom_item_shape_gray_rectangle" />
+
+                <!--item name-->
+                <TextView
+                    android:id="@+id/itemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/tienne"
+                    android:hint="Item Name"
+                    android:textAlignment="textStart"
+                    android:textSize="22sp"
+                    android:textColor="@color/textGrayForShop"
+                    android:textStyle="bold" />
+
+                <!--item price and availability-->
+                <LinearLayout
+                    android:id="@+id/itemPriceAvailabilityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/itemPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/tienne"
+                        android:hint="Item Price"
+                        android:paddingLeft="0dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:textSize="18dp"
+                        android:textColor="@color/textGrayForShop"/>
+
+                    <LinearLayout
+                        android:id="@+id/itemAvailabilityLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/itemAvailability"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/tienne"
+                            android:hint="Item Availability"
+                            android:paddingRight="0dp"
+                            android:textSize="18dp"
+                            android:textColor="@color/textGrayForShop"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--item description-->
+                <TextView
+                    android:id="@+id/itemDescriptionTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/tienne"
+                    android:text="Description:"
+                    android:textAlignment="textStart"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/itemDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/tienne"
+                    android:hint="Item Description"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textGrayForShop"
+                    android:textSize="15dp" />
+
+                <!--item keywords-->
+                <TextView
+                    android:id="@+id/itemKeywordsTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/tienne"
+                    android:text="Keywords:"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/itemKeywords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/tienne"
+                    android:hint="Item Keywords"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textGrayForShop"
+                    android:textSize="15dp" />
+
+                <!--rating bar-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ratingLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="0dp">
+
+                    <RatingBar
+                        android:id="@+id/itemRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="false"
+                        android:layout_marginLeft="-50dp"
+                        android:maxHeight="50dp"
+                        android:minHeight="50dp"
+                        android:numStars="5"
+                        android:progressTint="@color/darkYellow"
+                        android:rating="2.5"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:stepSize="0.5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

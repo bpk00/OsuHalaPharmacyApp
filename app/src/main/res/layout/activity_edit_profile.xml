@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".EditProfile">
+
+    <!--background big circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-20dp"
+        android:paddingRight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape_light_blue" />
+
+    <!--small circle shape-->
+    <ImageView
+        android:id="@+id/smallCircleShape"
+        android:layout_width="146dp"
+        android:layout_height="141dp"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginBottom="-30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/osuhala_full_circle_shape_light_blue" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/scrollViewField"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="50dp">
+
+        <LinearLayout
+            android:id="@+id/contentFieldLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--topic-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/julee"
+                android:gravity="center"
+                android:text="Edit Profile"
+                android:textColor="#2B318E"
+                android:textSize="58sp" />
+
+            <!--name field-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nameFieldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:foregroundGravity="center">
+
+                <!--name field - shape-->
+                <ImageView
+                    android:id="@+id/imageViewName"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/custom_shapes_light_blue_rectangle" />
+
+                <!--name field - icon and input-->
+                <LinearLayout
+                    android:id="@+id/nameLayout"
+                    android:layout_width="296dp"
+                    android:layout_height="41dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewName"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewName"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewName"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewName">
+
+                    <ImageView
+                        android:id="@+id/nameIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/profile_logo_white" />
+
+                    <EditText
+                        android:id="@+id/nameInput"
+                        android:layout_width="250dp"
+                        android:layout_height="48dp"
+                        android:background="#001DACEA"
+                        android:ems="10"
+                        android:fontFamily="@font/tienne"
+                        android:hint="Enter Your New Name"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--username field-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userNameFieldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:foregroundGravity="center">
+
+                <!--username field - shape-->
+                <ImageView
+                    android:id="@+id/imageViewUserName"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/custom_shapes_light_blue_rectangle" />
+
+                <!--username field - icon and input-->
+                <LinearLayout
+                    android:id="@+id/userNameLayout"
+                    android:layout_width="296dp"
+                    android:layout_height="41dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <ImageView
+                        android:id="@+id/userNameIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/username_logo_white" />
+
+                    <EditText
+                        android:id="@+id/userNameInput"
+                        android:layout_width="250dp"
+                        android:layout_height="48dp"
+                        android:background="#001DACEA"
+                        android:ems="10"
+                        android:fontFamily="@font/tienne"
+                        android:hint="Enter New Username"
+                        android:inputType="text"
+                        android:paddingStart="18dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--email field-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emailFieldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:foregroundGravity="center">
+
+                <!--email field - shape-->
+                <ImageView
+                    android:id="@+id/imageViewEmail"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/custom_shapes_light_blue_rectangle" />
+
+                <!--email field - icon and input-->
+                <LinearLayout
+                    android:id="@+id/emailLayout"
+                    android:layout_width="296dp"
+                    android:layout_height="41dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewEmail"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewEmail"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewEmail"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewEmail">
+
+                    <ImageView
+                        android:id="@+id/emailIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/email_logo_white" />
+
+                    <EditText
+                        android:id="@+id/emailInput"
+                        android:layout_width="250dp"
+                        android:layout_height="48dp"
+                        android:background="#001DACEA"
+                        android:ems="10"
+                        android:fontFamily="@font/tienne"
+                        android:hint="Enter Your New Email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="20dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--password field-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/passwordFieldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:foregroundGravity="center">
+
+                <!--password field - shape-->
+                <ImageView
+                    android:id="@+id/imageViewPassword"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/custom_shapes_light_blue_rectangle" />
+
+                <!--password field - icon and input-->
+                <LinearLayout
+                    android:id="@+id/passwordLayout"
+                    android:layout_width="296dp"
+                    android:layout_height="41dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewPassword"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewPassword"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewPassword">
+
+                    <ImageView
+                        android:id="@+id/passwordIcon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/password_logo_white" />
+
+                    <EditText
+                        android:id="@+id/passwordInput"
+                        android:layout_width="250dp"
+                        android:layout_height="48dp"
+                        android:background="#001DACEA"
+                        android:ems="10"
+                        android:fontFamily="@font/tienne"
+                        android:hint="Enter New Password"
+                        android:inputType="textPassword"
+                        android:paddingStart="20dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--confirm password field-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirmPasswordFieldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:foregroundGravity="center">
+
+                <!--confirm password field - shape-->
+                <ImageView
+                    android:id="@+id/imageViewConfirmPassword"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/custom_shapes_light_blue_rectangle" />
+
+                <!--confirm password field - icon and input-->
+                <LinearLayout
+                    android:id="@+id/confirmPasswordLayout"
+                    android:layout_width="296dp"
+                    android:layout_height="41dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewConfirmPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/imageViewConfirmPassword"
+                    app:layout_constraintStart_toStartOf="@+id/imageViewConfirmPassword"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewConfirmPassword">
+
+                    <ImageView
+                        android:id="@+id/confirmPasswordIcon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/confirm_password_logo" />
+
+                    <EditText
+                        android:id="@+id/confirmPasswordInput"
+                        android:layout_width="250dp"
+                        android:layout_height="48dp"
+                        android:background="#001DACEA"
+                        android:ems="10"
+                        android:fontFamily="@font/tienne"
+                        android:hint="Confirm New Password"
+                        android:inputType="textPassword"
+                        android:paddingStart="20dp"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--btn-->
+            <LinearLayout
+                android:id="@+id/saveBtnLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.814">
+
+                <!--save button-->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#000000"
+                    android:fontFamily="@font/jua"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <!--go back-->
+                <TextView
+                    android:id="@+id/textViewGoBack"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/jua"
+                    android:gravity="center"
+                    android:text="&lt;    Go Back To Profile"
+                    android:textColor="@color/darkBlue"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".JobVacancies">
+
+    <!--background big circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-20dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape_light_blue" />
+
+    <!--background small circle shape-->
+    <ImageView
+        android:id="@+id/smallCircleShape"
+        android:layout_width="146dp"
+        android:layout_height="141dp"
+        android:layout_marginLeft="-40dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
+        app:srcCompat="@drawable/osuhala_full_circle_shape_light_blue" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Job Vacancies"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/contentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/contentImageView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/image_jobs_vacancies" />
+
+            <TextView
+                android:id="@+id/contentTextView"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:text="New job vacancies will be posted here. Stay tuned for more details!" />
+
+            <!--buttons-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:padding="0dp">
+
+                <!-- First Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Pharmacist " />
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Community Pharmacist" />
+                </TableRow>
+
+                <!-- Second Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Dispensing Pharmacist" />
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="20px"
+                        android:text="Pharmacy Technician" />
+                </TableRow>
+
+                <!-- Third Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="30px"
+                        android:text="Pharmacy Assistant" />
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Drug Inspector" />
+                </TableRow>
+
+                <!-- Fourth Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="20px"
+                        android:text="Sales Representative" />
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Medical Writer" />
+                </TableRow>
+
+                <!-- Fifth Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Store Supervisor" />
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Inventory Manager" />
+                </TableRow>
+
+                <!-- Sixth Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Cashier" />
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Drug Inspector" />
+                </TableRow>
+
+                <!-- Seventh Row -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Quality Control Inspector" />
+
+                    <TextView
+                        style="@style/dashboardButtonStyle"
+                        android:layout_weight="1"
+                        android:text="Warehouse Staff" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

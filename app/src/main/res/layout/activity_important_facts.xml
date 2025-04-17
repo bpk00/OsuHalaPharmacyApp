@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ImportantFacts">
+
+    <!--background big circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-20dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape_light_blue" />
+
+    <!--background small circle shape-->
+    <ImageView
+        android:id="@+id/smallCircleShape"
+        android:layout_width="146dp"
+        android:layout_height="141dp"
+        android:layout_marginLeft="-40dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
+        app:srcCompat="@drawable/osuhala_full_circle_shape_light_blue" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Health Facts"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/contentScrollView"
+        style="@style/scrollBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
+
+        <LinearLayout
+            style="@style/linearLayoutScrollViewStyle">
+
+            <TextView
+                android:id="@+id/contentTopic"
+                style="@style/subTopicStyle1"
+                android:text="Do you know these facts?"/>
+
+            <!--blood pressure-->
+            <ImageView
+                style="@style/imageStyle"
+                android:layout_height="200dp"
+                android:src="@drawable/blood_pressure_image" />
+
+            <LinearLayout
+                style="@style/linearLayoutStyle1"
+                android:padding='0dp'>
+
+                <TextView
+                    android:id="@+id/contentTopicBloodPressure"
+                    style="@style/subTopicStyle2"
+                    android:text="Blood Pressure Stages" />
+
+                <ImageView
+                    android:id="@+id/bloodPressureChart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="360dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/blood_pressure_chart" />
+            </LinearLayout>
+
+            <!--blood sugar-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="-20dp"
+                android:padding="0dp"
+                android:src="@drawable/blood_sugar_image" />
+
+            <LinearLayout
+                style="@style/linearLayoutStyle1"
+                android:padding='0dp'>
+
+                <TextView
+                    android:id="@+id/contentTopicBloodSugar"
+                    style="@style/subTopicStyle2"
+                    android:text="   Blood Sugar Stages" />
+
+                <ImageView
+                    android:id="@+id/bloodSugarChart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="245dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/normal_blood_sugar_levels_chart" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

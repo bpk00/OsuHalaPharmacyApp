@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".Services">
+
+    <!--background big circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-20dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape_light_blue" />
+
+    <!--background small circle shape-->
+    <ImageView
+        android:id="@+id/smallCircleShape"
+        android:layout_width="146dp"
+        android:layout_height="141dp"
+        android:layout_marginLeft="-40dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
+        app:srcCompat="@drawable/osuhala_full_circle_shape_light_blue" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Services"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/contentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/contentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We Are Offering a Variety of Blood and Urine Tests"
+                android:paddingHorizontal="30dp"
+                android:textColor="@color/darkBlue"
+                android:paddingTop="20dp"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dear Valued Customers,\n\n We are pleased to announce that our pharmacy is now offering a wide range of blood and urine tests as part of our healthcare services. These tests are designed to help you monitor and manage your health conveniently and efficiently. Our services include:"
+                android:paddingHorizontal="30dp"
+                android:paddingTop="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/textGrayForShop"/>
+
+            <!--blood test-->
+            <TextView
+                android:id="@+id/topicBloodTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="10dp"
+
+                android:text="Blood Test"
+                android:textAlignment="textStart"
+                android:textColor="@color/darkBlue"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textBloodTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:paddingHorizontal="30dp"
+                android:paddingTop="10dp"
+                android:lineHeight="20dp"
+                android:hint="⦿ Blood Glucose Test\n⦿ Cholesterol Test\n⦿ Hemoglobin A1c Test\n⦿ Lipid Panel\n⦿ C-Reactive Protein (CRP) Test\n⦿ Thyroid Function Tests\n⦿ Vitamin D Test\n and other kinds of Blood Tests"
+                android:textColorHint="@color/darkGray"
+                android:textSize="15dp" />
+
+            <!--Urine test-->
+            <TextView
+                android:id="@+id/topicUrineTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold
+"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Urine Test"
+                android:textAlignment="textStart"
+                android:textColor="@color/darkBlue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textUrineTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineHeight="20dp"
+                android:hint="⦿ Urine Full Report\n⦿ Urine Pregnancy Test\n⦿ Urine pH level Test\n⦿ Urine Glucose Test\n⦿ Urine Protein Test\n and other kinds of Urine Tests."
+                android:paddingHorizontal="30dp"
+                android:paddingTop="10dp"
+                android:text=""
+                android:textColorHint="@color/darkGray"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We can provide quick and accurate testing reports.\nFor more information or to do a test, please visit our pharmacy or contact us.\nStay healthy and take control of your health with our comprehensive testing services!\n\nThank you for choosing OsuHala for your healthcare needs.\n\nSincerely,\n\nOsuHala HealthCare Service Unit."
+                android:paddingHorizontal="30dp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                android:textColorHint="@color/darkGray"
+                android:textSize="18dp"
+                android:layout_marginBottom="30dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

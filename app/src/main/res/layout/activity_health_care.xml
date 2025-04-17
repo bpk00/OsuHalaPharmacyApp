@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".HealthCare">
+
+    <!--background circle-->
+    <ImageView
+        android:id="@+id/circleShape"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/osuhala_circle_shape" />
+
+    <!--background small circle shape-->
+    <ImageView
+        android:id="@+id/smallCircleShape"
+        android:layout_width="146dp"
+        android:layout_height="141dp"
+        android:layout_marginLeft="-40dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
+        app:srcCompat="@drawable/osuhala_full_circle_shape_light_blue" />
+
+    <!--topic-->
+    <LinearLayout
+        android:id="@+id/topBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/darkDarkGray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+            <!--topic-->
+            <TextView
+                android:id="@+id/topicOfWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jua"
+                android:gravity="center"
+                android:text="Health Care"
+                android:textColor="@color/textGrayForShop"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </LinearLayout>
+
+    <!--content-->
+    <ScrollView
+        style="@style/scrollBarStyle"
+        android:layout_marginTop="66dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/linearLayoutScrollViewStyle">
+
+            <!--tools' buttons-->
+            <LinearLayout
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/subTopicStyle1"
+                    android:text="Tools"/>
+
+                <!--buttons-->
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:padding="0dp">
+
+                    <!-- First Row -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/btnSensor"
+                            style="@style/dashboardButtonStyle"
+                            android:text="Sensor Advice"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/btnBMI"
+                            style="@style/dashboardButtonStyle"
+                            android:text="BMI Calculator"
+                            android:layout_weight="1" />
+                    </TableRow>
+
+                    <!-- Second Row -->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/btnImportantFacts"
+                            style="@style/dashboardButtonStyle"
+                            android:text="Health Facts"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/btnOther"
+                            style="@style/dashboardButtonStyle"
+                            android:background="#00000000"
+                            android:layout_weight="1" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <!--what is healthcare-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/subTopicStyle1"
+                    android:layout_marginTop="20dp"
+                    android:text="What is Healthcare?"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    style="@style/imageStyle"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/healthcare_picture"/>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1">
+
+                    <TextView
+                        style="@style/smallTextStyle"
+                        android:textColor="@color/black"
+                        android:text="Healthcare involves taking care of health by preventing, diagnosing, treating, and recovering from illnesses, injuries, and other physical and mental conditions. It's important because it helps people to get the medical care they need to stay healthy and productive."/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--how to protect your health-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/subTopicStyle1"
+                    android:text="How to protect your health:"/>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="1. Eat a balanced diet:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Include a variety of fruits, vegetables, whole grains, and lean proteins."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/balance_diet_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="2. Exercise regularly:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Aim for at least 30 minutes of moderate activity most days of the week."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/exercise_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="3. Get enough sleep:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Strive for 7-9 hours of quality sleep each night."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/sleep_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="4. Stay hydrated:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Drink plenty of water throughout the day."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/drinking_water_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="5. Avoid smoking and limit alcohol:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="These habits can significantly impact your health negatively."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/avoiding_smoking_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="6. Practice good hygiene:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Wash your hands regularly and maintain personal cleanliness."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/washing_hands_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="7. Manage stress:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Engage in activities that help you relax, such as yoga, meditation, or hobbies."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/manage_stress_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="8. Regular check-ups:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Visit your healthcare provider for routine check-ups and screenings."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/health_check_up_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="9. Stay informed:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Educate yourself about health issues and follow medical advice."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/stay_informed_icon"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/linearLayoutStyle1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:layout_marginBottom="0dp"
+                            android:textAlignment="textStart"
+                            android:textStyle="bold"
+                            android:text="10.Vaccinations:"/>
+                        <TextView
+                            style="@style/smallTextStyle"
+                            android:layout_width="200dp"
+                            android:textAlignment="textStart"
+                            android:text="Keep up with recommended vaccinations to protect against diseases."/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/vaccination_icon"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--bottom navigation-->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        style="@style/bottomNavBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/iconHome"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_home_icon" />
+
+        <ImageView
+            android:id="@+id/iconNotice"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_notice_icon" />
+
+        <ImageView
+            android:id="@+id/iconLocation"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_location_icon" />
+
+        <ImageView
+            android:id="@+id/iconHealth"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_health_icon" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            style="@style/bottomNavBarIcon"
+            app:srcCompat="@drawable/osuhala_profile_icon" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
