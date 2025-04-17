@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OsuHala</string>
-    <!-- adding API Key string value -->
-    <string name="MAPS_API_KEY">Your_Google_Map_API_KEY_Add_here</string>
+<!--    <string name="app_name">OsuHala</string>-->
+<!--    &lt;!&ndash; adding API Key string value &ndash;&gt;-->
+<!--    <string name="MAPS_API_KEY">Your_Google_Map_API_KEY_Add_here</string>-->
 </resources>
