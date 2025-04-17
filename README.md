@@ -3,6 +3,9 @@
 
 A comprehensive pharmacy Android application developed using **Java** in **Android Studio**. It integrates **Firebase**, **SQLite**, **Google Maps**, and **device sensors** to offer a full-featured health support platform.
 
+**OsuHala Pharmacy App** is a smart, all-in-one mobile solution developed for OsuHala Pharmacy to streamline and enhance the customer experience.
+The primary functionality of the app is to **display the availability of pharmacy items**, allowing users to browse through products before visiting the pharmacy physically. The app also includes a range of additional pharmacy and healthcare-related features.
+
 ##
 ## 🚀 Features
 
@@ -54,6 +57,7 @@ A comprehensive pharmacy Android application developed using **Java** in **Andro
 
 ##
 ## App Preview
+![OsuHala Preview](OsuHala_Preview.png)
 
 ##
 ** *** **
